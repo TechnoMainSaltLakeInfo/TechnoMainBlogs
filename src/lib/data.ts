@@ -19,7 +19,6 @@ export const navLinks = [
   { href: "/clubs", label: "Clubs" },
   { href: "/facilities", label: "Facilities" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 

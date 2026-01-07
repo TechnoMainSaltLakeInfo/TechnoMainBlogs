@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, Mail, Phone, MapPin } from "lucide-react";
+import { GraduationCap, Mail, Phone, MapPin, Users } from "lucide-react";
 import { navLinks } from "@/lib/data";
 
 export default function Footer() {
@@ -28,7 +28,18 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
+            <h3 className="font-headline font-semibold">Developers Team</h3>
+            <ul className="mt-4 space-y-2">
+                <li>
+                  <Link href="/about" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary">
+                    <Users className="h-4 w-4" />
+                    <span>Site Developers</span>
+                  </Link>
+                </li>
+            </ul>
+          </div>
+          <div className="md:col-span-1">
             <h3 className="font-headline font-semibold">Contact Us</h3>
             <div className="mt-4 space-y-3 text-sm text-muted-foreground">
               <p className="flex items-start gap-3">
