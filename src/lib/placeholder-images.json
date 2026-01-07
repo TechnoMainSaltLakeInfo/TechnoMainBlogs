@@ -1,3 +1,100 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "carousel-1",
+      "description": "University campus on a sunny day",
+      "imageUrl": "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc2Nzc4NTA5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university campus"
+    },
+    {
+      "id": "carousel-2",
+      "description": "Students collaborating in a modern library",
+      "imageUrl": "https://images.unsplash.com/photo-1695548053857-c070504389f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdHVkZW50cyUyMGxpYnJhcnl8ZW58MHx8fHwxNzY3ODAzMDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students library"
+    },
+    {
+      "id": "carousel-3",
+      "description": "Graduation ceremony with students throwing caps",
+      "imageUrl": "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY3NzQ5OTcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "graduation ceremony"
+    },
+    {
+      "id": "facility-library",
+      "description": "The main university library",
+      "imageUrl": "https://images.unsplash.com/photo-1683319598210-d70486f2f996?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx1bml2ZXJzaXR5JTIwbGlicmFyeXxlbnwwfHx8fDE3Njc4MTM2NzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university library"
+    },
+    {
+      "id": "facility-gym",
+      "description": "State-of-the-art gymnasium",
+      "imageUrl": "https://images.unsplash.com/photo-1610456756490-0f7069c202d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxneW1uYXNpdW0lMjBmaXRuZXNzfGVufDB8fHx8MTc2NzgxMzY3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gymnasium fitness"
+    },
+    {
+      "id": "facility-lab",
+      "description": "Modern science laboratory",
+      "imageUrl": "https://images.unsplash.com/photo-1602052577122-f73b9710adba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwbGFifGVufDB8fHx8MTc2Nzc3MjU2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science lab"
+    },
+    {
+      "id": "facility-stadium",
+      "description": "University sports stadium",
+      "imageUrl": "https://images.unsplash.com/photo-1520470082789-e347ad8b1944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzcG9ydHMlMjBzdGFkaXVtfGVufDB8fHx8MTc2NzcyNTY5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sports stadium"
+    },
+    {
+      "id": "team-1",
+      "description": "Portrait of team member 1",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY3NzQzODk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-2",
+      "description": "Portrait of team member 2",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njc3NDM4OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-3",
+      "description": "Portrait of team member 3",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY3NzQzODk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-4",
+      "description": "Portrait of team member 4",
+      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njc3NDM4OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-5",
+      "description": "Portrait of team member 5",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY3NzQzODk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "blog-1",
+      "description": "Image for blog post about research",
+      "imageUrl": "https://images.unsplash.com/photo-1765238937536-47ba9fbe2193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZXNlYXJjaCUyMGRpc2NvdmVyeXxlbnwwfHx8fDE3Njc4MTM2NzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "research discovery"
+    },
+    {
+      "id": "blog-2",
+      "description": "Image for blog post about campus life",
+      "imageUrl": "https://images.unsplash.com/photo-1621394414118-447cda8e466c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYW1wdXMlMjBsaWZlfGVufDB8fHx8MTc2NzgxMzY3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "campus life"
+    },
+    {
+      "id": "blog-3",
+      "description": "Image for blog post about alumni success",
+      "imageUrl": "https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdWNjZXNzJTIwc3Rvcnl8ZW58MHx8fHwxNzY3ODEzNjcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "success story"
+    },
+    {
+      "id": "blog-4",
+      "description": "Image for blog post about study tips",
+      "imageUrl": "https://images.unsplash.com/photo-1760840415479-438f61268bed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHVkeWluZyUyMGJvb2tzfGVufDB8fHx8MTc2NzgxMzY3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "studying books"
+    }
+  ]
 }
