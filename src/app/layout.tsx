@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "TMSL Static Site",
+  title: "AbouTMSL",
   description: "A modern, static site for The Modern School of Learning.",
 };
 

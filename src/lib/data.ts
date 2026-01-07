@@ -10,6 +10,24 @@ import {
   Bot,
   Film,
   BookOpenCheck,
+  Cpu,
+  Server,
+  ShieldCheck,
+  Network,
+  Briefcase,
+  Smartphone,
+  CircuitBoard,
+  Factory,
+  Building,
+  Atom,
+  CookingPot,
+  Laptop,
+  GraduationCap,
+  Landmark,
+  Handshake,
+  HeartPulse,
+  Tv,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 
@@ -43,39 +61,84 @@ export const featuredContent = [
   },
 ];
 
-type Department = { name: string; description: string; icon: LucideIcon };
-export const departments: Department[] = [
+type Department = { 
+  name: string; 
+  slug: string;
+  icon: LucideIcon;
+  teachers: Teacher[];
+};
+
+type DepartmentCategory = {
+  name: string;
+  icon: LucideIcon;
+  departments: Department[];
+};
+
+export const departmentCategories: DepartmentCategory[] = [
   {
-    name: "Science",
-    description: "Exploring the frontiers of biology, chemistry, and physics.",
-    icon: FlaskConical,
+    name: "Engineering & Technology Departments",
+    icon: Cpu,
+    departments: [
+      { name: "Computer Science & Engineering (CSE)", slug: "cse", icon: Laptop, teachers: [
+        { name: "Dr. Alan Turing", role: "Professor", imageId: "teacher-1" },
+        { name: "Dr. Ada Lovelace", role: "Associate Professor", imageId: "teacher-2" },
+      ]},
+      { name: "Computer Science & Engineering – Artificial Intelligence & Machine Learning", slug: "cse-ai-ml", icon: Bot, teachers: [
+        { name: "Dr. Geoffrey Hinton", role: "Professor", imageId: "teacher-3" },
+      ] },
+      { name: "Computer Science & Engineering – Data Science", slug: "cse-ds", icon: Server, teachers: [] },
+      { name: "Computer Science & Engineering – Cyber Security", slug: "cse-cs", icon: ShieldCheck, teachers: [] },
+      { name: "Computer Science & Business Systems", slug: "csbs", icon: Briefcase, teachers: [] },
+      { name: "Computer Science & Engineering – Internet of Things (IoT)", slug: "cse-iot", icon: Network, teachers: [] },
+      { name: "Information Technology (IT)", slug: "it", icon: Laptop, teachers: [] },
+      { name: "Electronics & Communication Engineering (ECE)", slug: "ece", icon: Smartphone, teachers: [] },
+      { name: "Electrical Engineering (EE)", slug: "ee", icon: CircuitBoard, teachers: [] },
+      { name: "Mechanical Engineering", slug: "me", icon: Factory, teachers: [] },
+      { name: "Civil Engineering", slug: "ce", icon: Building, teachers: [] },
+      { name: "Electronics & Instrumentation Engineering (EIE)", slug: "eie", icon: Atom, teachers: [] },
+      { name: "Food Technology", slug: "ft", icon: CookingPot, teachers: [] },
+    ],
   },
   {
-    name: "Mathematics",
-    description: "The language of the universe, from algebra to topology.",
-    icon: Calculator,
+    name: "Computer & IT Related Departments",
+    icon: Laptop,
+    departments: [
+      { name: "Computer Applications (BCA / MCA)", slug: "ca", icon: Laptop, teachers: [] },
+    ],
   },
   {
-    name: "Fine Arts",
-    description: "Cultivating creativity through painting, sculpture, and design.",
-    icon: Palette,
+    name: "Management & Business",
+    icon: Landmark,
+    departments: [
+      { name: "Business Studies (BBA / MBA)", slug: "bs", icon: Handshake, teachers: [] },
+      { name: "Hospitality Management", slug: "hm", icon: Users, teachers: [] },
+      { name: "Hospital Administration (e.g., Master in Hospital Administration – MHA)", slug: "ha", icon: HeartPulse, teachers: [] },
+    ],
   },
   {
-    name: "Performing Arts",
-    description: "Express yourself on the stage through drama and music.",
-    icon: Drama,
+    name: "Media & Sciences",
+    icon: Tv,
+    departments: [
+      { name: "Media Science", slug: "ms", icon: Film, teachers: [] },
+    ],
   },
   {
-    name: "History",
-    description: "Understanding the past to shape a better future.",
-    icon: History,
+    name: "Basic Sciences & Humanities",
+    icon: BookOpenCheck,
+    departments: [
+      { name: "Basic Science & Humanities", slug: "bsh", icon: FlaskConical, teachers: [] },
+    ],
   },
   {
-    name: "Global Studies",
-    description: "Engaging with diverse cultures and global challenges.",
-    icon: Globe2,
+    name: "Postgraduate Departments",
+    icon: GraduationCap,
+    departments: [
+      { name: "Master in Business Administration (MBA)", slug: "mba", icon: Briefcase, teachers: [] },
+    ],
   },
 ];
+
+export const departments = departmentCategories.flatMap(cat => cat.departments);
 
 type Club = { name: string; description:string; icon: LucideIcon };
 export const clubs: Club[] = [
@@ -106,6 +169,7 @@ export const clubs: Club[] = [
     }
 ];
 
+type Teacher = { name: string; role: string; imageId: string };
 type TeamMember = {
   name: string;
   role: string;

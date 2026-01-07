@@ -20,7 +20,7 @@ export default function Header() {
         <Link href="/" className="mr-6 flex items-center gap-2">
           <GraduationCap className="h-6 w-6 text-primary" />
           <span className="font-headline hidden font-bold sm:inline-block">
-            TMSL
+            AbouTMSL
           </span>
         </Link>
 
@@ -52,7 +52,7 @@ export default function Header() {
                  <Link href="/" className="mr-6 flex items-center gap-2 mb-8">
                     <GraduationCap className="h-6 w-6 text-primary" />
                     <span className="font-headline font-bold">
-                        TMSL
+                        AbouTMSL
                     </span>
                  </Link>
                 <nav className="grid gap-6 text-lg font-medium">

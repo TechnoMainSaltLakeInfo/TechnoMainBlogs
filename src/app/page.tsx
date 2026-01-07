@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { featuredContent, departments, blogPosts } from "@/lib/data";
+import { featuredContent, departmentCategories, blogPosts } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import type { ImagePlaceholder } from "@/lib/placeholder-images";
 
@@ -18,6 +18,8 @@ const getImage = (id: string): ImagePlaceholder | undefined =>
 
 export default function Home() {
   const recentPosts = blogPosts.slice(0, 2);
+  const featuredDepartments = departmentCategories.flatMap(d => d.departments).slice(0, 3);
+
 
   return (
     <div className="fade-in space-y-16 lg:space-y-24">
@@ -69,7 +71,7 @@ export default function Home() {
       <section className="container">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-            Welcome to TMSL
+            Welcome to AbouTMSL
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
             Explore a world of knowledge, innovation, and community. At The Modern School of Learning, we are dedicated to fostering the next generation of leaders and thinkers.
@@ -82,18 +84,17 @@ export default function Home() {
           Our Departments
         </h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {departments.slice(0, 3).map((dept) => (
-            <Card key={dept.name} className="flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <dept.icon className="h-8 w-8" />
-                </div>
-                <CardTitle className="font-headline pt-4">{dept.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{dept.description}</p>
-              </CardContent>
-            </Card>
+          {featuredDepartments.map((dept) => (
+             <Link href={`/departments/${dept.slug}`} key={dept.slug} className="block hover:no-underline">
+                <Card className="flex h-full flex-col items-center text-center hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <dept.icon className="h-8 w-8" />
+                    </div>
+                    <CardTitle className="font-headline pt-4 text-lg">{dept.name}</CardTitle>
+                  </CardHeader>
+                </Card>
+             </Link>
           ))}
         </div>
         <div className="mt-8 text-center">

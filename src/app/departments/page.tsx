@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { departments } from "@/lib/data";
+import { departmentCategories } from "@/lib/data";
 
 export default function DepartmentsPage() {
   return (
@@ -13,19 +14,28 @@ export default function DepartmentsPage() {
         </p>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {departments.map((dept) => (
-          <Card key={dept.name} className="flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <dept.icon className="h-10 w-10" />
-              </div>
-              <CardTitle className="font-headline pt-4">{dept.name}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">{dept.description}</p>
-            </CardContent>
-          </Card>
+      <div className="mt-12 space-y-12">
+        {departmentCategories.map((category) => (
+          <div key={category.name}>
+            <h2 className="font-headline text-2xl font-bold mb-6 flex items-center gap-3">
+              <category.icon className="h-7 w-7 text-primary" />
+              {category.name}
+            </h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {category.departments.map((dept) => (
+                <Link href={`/departments/${dept.slug}`} key={dept.slug} className="block hover:no-underline">
+                  <Card className="h-full hover:shadow-lg transition-shadow">
+                    <CardHeader className="flex-row items-center gap-4">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary flex-shrink-0">
+                        <dept.icon className="h-6 w-6" />
+                      </div>
+                      <CardTitle className="font-headline text-base">{dept.name}</CardTitle>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>
