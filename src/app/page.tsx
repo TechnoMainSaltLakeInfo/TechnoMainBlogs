@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import { featuredContent, departmentCategories, blogPosts } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import type { ImagePlaceholder } from "@/lib/placeholder-images";
+import React from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const getImage = (id: string): ImagePlaceholder | undefined =>
   PlaceHolderImages.find((img) => img.id === id);
@@ -19,16 +23,22 @@ const getImage = (id: string): ImagePlaceholder | undefined =>
 export default function Home() {
   const recentPosts = blogPosts.slice(0, 2);
   const featuredDepartments = departmentCategories.flatMap(d => d.departments).slice(0, 3);
-
+  
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
 
   return (
     <div className="fade-in space-y-16 lg:space-y-24">
       <section className="relative h-[500px] w-full">
         <Carousel
+          plugins={[plugin.current]}
           className="h-full w-full"
           opts={{
             loop: true,
           }}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent className="h-full">
             {featuredContent.map((item, index) => {
